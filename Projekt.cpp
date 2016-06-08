@@ -21,6 +21,15 @@ int main() {
 
 		case 'p': // potega
 
+			double a; int b;
+
+			std::cout << "Podaj podstawe: ";
+			std::cin >> a;
+			std::cout << "\nPodaj potege: ";
+			std::cin >> b;
+
+			std::cout << a << "^" << b << " = " << potega(a, b) << "\n";
+
 			break;
 		case 'm': // potega
 
@@ -36,4 +45,13 @@ int main() {
 
 	system("PAUSE");
 	return 0;
+}
+
+/* Funkcja przyjmuje parametry a i b -> a^b */
+double potega(double a, int b) {
+	double zwracany = 1.0;
+	for (unsigned int i = 0; i < b; ++i) {
+		zwracany *= a;
+	}
+	return zwracany;
 }
