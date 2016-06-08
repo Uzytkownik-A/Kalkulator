@@ -1,5 +1,7 @@
 #include <iostream>
 
+// Prototypy
+double potega(double a, unsigned int b);
 
 
 int main() {
@@ -21,7 +23,7 @@ int main() {
 
 		case 'p': // potega
 
-			double a; int b;
+			double a; unsigned int b;
 
 			std::cout << "Podaj podstawe: ";
 			std::cin >> a;
@@ -48,7 +50,7 @@ int main() {
 }
 
 /* Funkcja przyjmuje parametry a i b -> a^b */
-double potega(double a, int b) {
+double potega(double a, unsigned int b) {
 	double zwracany = 1.0;
 	for (unsigned int i = 0; i < b; ++i) {
 		zwracany *= a;
