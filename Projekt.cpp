@@ -3,6 +3,7 @@
 // Prototypy
 double potega(double a, unsigned int b);
 double delta(double a, double b, double c);
+double pierwiastek(double a, double b);
 
 int main() {
 	double o; unsigned int p;
@@ -64,6 +65,14 @@ int main() {
 			break;
 		case 's': // pierwiastek
 
+
+			std::cout << "Podaj podstawe: ";
+			std::cin >> o;
+			std::cout << "\nPodaj stopien pierwiastka: ";
+			std::cin >> p;
+
+			std::cout << p << "/" << o << " = " << pierwiastek(o, p) << "\n";
+
 			break;
 		case 'k': // koniec
 			return 0;
@@ -87,4 +96,9 @@ double potega(double a, unsigned int b) {
 /* Funkcja zwraca delte z parametrow funkcji kwadratowej */
 double delta( double a, double b, double c ) {
 	return (b*b) - (4.0*a*c);
+}
+
+double pierwiastek( double a, double b ) {
+	if (!b) return 0;
+	return pow(a, 1.0 / b);
 }
