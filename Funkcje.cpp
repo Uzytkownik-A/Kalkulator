@@ -11,7 +11,7 @@ double potega(double a, unsigned int b) {
 
 /* Funkcja zwraca delte z parametrow funkcji kwadratowej */
 double delta(double a, double b, double c) {
-	return (b*b) - (4.0*a*c);
+	return (b*b) - (4*a*c);
 }
 
 /* Funkcja pierwiastkowania */
